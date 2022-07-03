@@ -1,0 +1,18 @@
+/*---------- COLOR ----------*/
+$color-primary: hsl(0, 93%, 68%);
+$color-primary-desaturate: hsl(0, 36%, 70%);
+$color-primary-grahish: hsl(0, 6%, 24%);
+$color-primary-grahish-2: hsl(0, 6%, 70%);
+$color-linear-white: hsl(0, 100%, 96%);
+$color-linear-white-2: hsl(0, 100%, 86%);
+$color-linear-light-red: hsl(0, 80%, 86%);
+$color-linear-red: hsl(0, 74%, 74%);
+
+// - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+// - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+
+/*---------- FONT ----------*/
+$font: "Josefin Sans", sans-serif;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-semi-bold: 600;

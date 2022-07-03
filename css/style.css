@@ -1,0 +1,123 @@
+/*---------- COLOR ----------*/
+/*---------- FONT ----------*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  font-size: 1.6rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem; }
+
+/*---------- HELPER CLASS ----------*/
+.btn {
+  display: inline-block;
+  border: none;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  padding: 1.2rem 3.5rem;
+  border-radius: 100px;
+  box-shadow: 0 8px 15px #f8bfbf;
+  cursor: pointer; }
+  .btn:hover, .btn:active {
+    background-image: linear-gradient(135deg, #ffebeb, #ffb8b8); }
+
+.hidden {
+  visibility: hidden; }
+
+/*---------- HEADER INFO ----------*/
+.header {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  max-height: 80vh; }
+  .header__container {
+    display: felx;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: url("../images/bg-pattern-desktop.svg") no-repeat;
+    background-size: cover; }
+  .header__info {
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    width: Max(60%, 32rem);
+    padding: 5rem 8rem 5rem 10rem; }
+  .header .logo {
+    width: 25%;
+    margin-bottom: 8rem; }
+  .header .heading-h1 {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 17px;
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem; }
+    .header .heading-h1 span {
+      font-weight: 300;
+      color: #ce9797; }
+  .header__text {
+    color: #ce9797;
+    line-height: 1.6;
+    font-size: 1.4rem;
+    margin-bottom: 3rem; }
+  .header__img img {
+    width: 100%; }
+
+/*---------- EMAIL ----------*/
+.notification {
+  color: #ee8c8c;
+  font-size: 1.3rem;
+  margin-left: 2rem; }
+
+.email {
+  position: relative;
+  width: 80%;
+  display: inline-block;
+  margin-bottom: 1rem; }
+  .email input {
+    display: block;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.2rem 2rem;
+    width: 90%;
+    border-radius: 100px;
+    border: 0.3px solid #b7aeae; }
+    .email input::-ms-input-placeholder {
+      color: #b7aeae;
+      font-weight: 300; }
+    .email input::-webkit-input-placeholder {
+      font-weight: 300;
+      color: #b7aeae; }
+    .email input:focus:invalid {
+      border: 1px solid #f96262; }
+  .email .btn {
+    position: absolute;
+    top: -2px;
+    right: -12px; }
+  .email .btn img {
+    width: 9px; }
+
+.icon {
+  width: 2rem;
+  position: absolute;
+  top: 35%;
+  right: 20%;
+  transform: translate(-35%, -25%); }
+
+/*---------- FOOTER ----------*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 5rem; }
+
+.attribution a {
+  color: #3e52a3; }
