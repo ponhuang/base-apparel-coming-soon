@@ -1,0 +1,33 @@
+/*---------- 860px ----------*/
+
+@media (max-width: 53.75em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  body {
+    background-image: none;
+    background-color: $color-linear-white;
+  }
+
+  .logo {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    padding: 2rem 4rem;
+  }
+
+  .hero {
+    &__img {
+      grid-column: 1 / -1;
+      grid-row: 2 / 3;
+      background-image: url("../images/hero-mobile.jpg");
+      background-size: 100%;
+      height: Min(40vh, 25rem);
+    }
+
+    &__info {
+      grid-column: 1 / -1;
+      grid-row: 3 / -1;
+    }
+  }
+}

@@ -16,9 +16,9 @@ body {
   font-weight: $fw-regular;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 8rem;
+
+  background: url("../images/bg-pattern-desktop.svg") no-repeat;
+  background-size: cover;
 }
 
 /*---------- HELPER CLASS ----------*/
