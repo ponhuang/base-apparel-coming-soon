@@ -51,17 +51,10 @@
 }
 
 /*---------- EMAIL ----------*/
-.notification {
-  color: $color-linear-red;
-  font-size: 1.3rem;
-  margin-left: 2rem;
-}
-
 .email {
   position: relative;
   width: 80%;
   display: inline-block;
-  margin-bottom: 1rem;
 
   input {
     display: block;
@@ -70,7 +63,7 @@
     padding: 1.2rem 2rem;
     width: 90%;
     border-radius: 100px;
-    border: 0.3px solid $color-primary-grahish-2;
+    border: 1px solid $color-primary-grahish-2;
 
     &::-ms-input-placeholder {
       color: $color-primary-grahish-2;
@@ -81,18 +74,31 @@
       color: $color-primary-grahish-2;
     }
 
-    &:focus:invalid {
-      border: 1px solid $color-primary;
+    &:focus {
+      outline: 0;
     }
   }
 
-  & .btn {
-    position: absolute;
-    top: -2px;
-    right: -16px;
+  &.success input {
+    border-color: rgb(76, 116, 92);
   }
 
-  .btn img {
+  &.error input {
+    border: 2px solid $color-primary;
+  }
+}
+
+form {
+  position: relative;
+}
+
+.btn-submit {
+  position: absolute;
+  top: 6%;
+  right: 15%;
+  transform: translate(-6%, -15%);
+
+  & > img {
     width: 9px;
   }
 }
@@ -100,9 +106,16 @@
 .icon {
   width: 2rem;
   position: absolute;
-  top: 35%;
+  top: 23%;
   right: 20%;
-  transform: translate(-35%, -25%);
+  transform: translate(-23%, -25%);
+}
+
+.notification {
+  color: $color-linear-red;
+  font-size: 1.3rem;
+  margin-left: 2rem;
+  margin-top: 1rem;
 }
 
 /*---------- FOOTER ----------*/

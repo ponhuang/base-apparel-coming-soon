@@ -21,7 +21,7 @@
     <title>Base Apparel coming soon page</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
+  <body onload="document.email.emailAddress.focus()">
     <header class="hero">
       <img src="images/logo.svg" alt="Base Apparel's logo" class="logo" />
       <div class="hero__info">
@@ -31,23 +31,23 @@
           Add your email below to stay up-to-date with announcements and our
           launch deals.
         </p>
-        <form class="email" action="#">
-          <input
-            id="emailAddress"
-            type="email"
-            placeholder="Email Address"
-            required
-          />
-          <img
-            src="images/icon-error.svg"
-            alt="error icon"
-            class="icon hidden"
-          />
-          <button class="btn">
+        <form id="form" action="#">
+          <div class="email success">
+            <input id="emailAddress" type="email" placeholder="Email Address" />
+            <img
+              src="images/icon-error.svg"
+              alt="error icon"
+              class="icon hidden"
+            />
+            <div class="notification hidden">
+              <p>Please provide a valid email</p>
+            </div>
+          </div>
+
+          <button class="btn btn-submit" type="submit">
             <img src="images/icon-arrow.svg" alt="Arrow Icon" />
           </button>
         </form>
-        <p class="notification hidden">Please provide a valid email</p>
       </div>
 
       <div class="hero__img"></div>

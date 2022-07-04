@@ -74,16 +74,10 @@ body {
   padding: 4rem 8rem; }
 
 /*---------- EMAIL ----------*/
-.notification {
-  color: #ee8c8c;
-  font-size: 1.3rem;
-  margin-left: 2rem; }
-
 .email {
   position: relative;
   width: 80%;
-  display: inline-block;
-  margin-bottom: 1rem; }
+  display: inline-block; }
   .email input {
     display: block;
     font-family: inherit;
@@ -91,28 +85,43 @@ body {
     padding: 1.2rem 2rem;
     width: 90%;
     border-radius: 100px;
-    border: 0.3px solid #b7aeae; }
+    border: 1px solid #b7aeae; }
     .email input::-ms-input-placeholder {
       color: #b7aeae;
       font-weight: 300; }
     .email input::-webkit-input-placeholder {
       font-weight: 300;
       color: #b7aeae; }
-    .email input:focus:invalid {
-      border: 1px solid #f96262; }
-  .email .btn {
-    position: absolute;
-    top: -2px;
-    right: -16px; }
-  .email .btn img {
+    .email input:focus {
+      outline: 0; }
+  .email.success input {
+    border-color: #4c745c; }
+  .email.error input {
+    border: 2px solid #f96262; }
+
+form {
+  position: relative; }
+
+.btn-submit {
+  position: absolute;
+  top: 6%;
+  right: 15%;
+  transform: translate(-6%, -15%); }
+  .btn-submit > img {
     width: 9px; }
 
 .icon {
   width: 2rem;
   position: absolute;
-  top: 35%;
+  top: 23%;
   right: 20%;
-  transform: translate(-35%, -25%); }
+  transform: translate(-23%, -25%); }
+
+.notification {
+  color: #ee8c8c;
+  font-size: 1.3rem;
+  margin-left: 2rem;
+  margin-top: 1rem; }
 
 /*---------- FOOTER ----------*/
 .attribution {
