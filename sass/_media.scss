@@ -10,13 +10,13 @@
     background-color: #faf2f2;
   }
 
-  .logo {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
-    padding: 2rem 4rem;
-  }
-
   .hero {
+    .logo {
+      grid-column: 1 / -1;
+      grid-row: 1 / 2;
+      padding: 2rem 6rem;
+    }
+
     &__img {
       grid-column: 1 / -1;
       grid-row: 2 / 3;
@@ -28,6 +28,11 @@
     &__info {
       grid-column: 1 / -1;
       grid-row: 3 / -1;
+      padding: 2rem 6rem;
     }
+  }
+
+  .attribution {
+    margin-top: 15rem;
   }
 }

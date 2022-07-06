@@ -16,6 +16,8 @@ body {
   font-weight: 400;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-height: 100vh;
   background: url("../images/bg-pattern-desktop.svg") no-repeat;
   background-size: cover; }
@@ -128,10 +130,10 @@ body {
   body {
     background-image: none;
     background-color: #faf2f2; }
-  .logo {
+  .hero .logo {
     grid-column: 1 / -1;
     grid-row: 1 / 2;
-    padding: 2rem 4rem; }
+    padding: 2rem 6rem; }
   .hero__img {
     grid-column: 1 / -1;
     grid-row: 2 / 3;
@@ -140,4 +142,7 @@ body {
     height: Min(40vh, 25rem); }
   .hero__info {
     grid-column: 1 / -1;
-    grid-row: 3 / -1; } }
+    grid-row: 3 / -1;
+    padding: 2rem 6rem; }
+  .attribution {
+    margin-top: 15rem; } }

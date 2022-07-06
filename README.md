@@ -60,22 +60,35 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-1. The import file order is important, put the variable on the very first top to avoide "Undefined variable".
+1.) The import file order in SASS is important, put the variable on the very first top to avoide "Undefined variable".
 
-```html
-<h1>Some HTML code I'm proud of</h1>
+```scss
+@import "variables";
+@import "base";
+@import "layout";
+@import "media";
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+2.) Learn how to make email validation
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+form.addEventListener("submit", (e) => {
+  // prevent form from submitting
+  e.preventDefault();
+  if (email.value == "") {
+    errorMessage.innerText = "Email cannot be blank";
+    form.classList.add("error");
+    form.classList.remove("success");
+  } else if (!email.value.match(regexEmail)) {
+    // if regexEmail is not matched user's enter value
+    errorMessage.innerText = "Please enter a valid email";
+    form.classList.add("error");
+    form.classList.remove("success");
+  } else {
+    form.classList.add("success");
+    form.classList.remove("error");
+  }
+});
 ```
 
 ### Continued development
