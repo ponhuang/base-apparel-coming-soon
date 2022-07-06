@@ -82,7 +82,8 @@ const proudOfThisFunc = () => {
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
+- [Email Validation](https://www.youtube.com/watch?v=ouCTndDS4zk) This YouTube video help me to know how to make email validation with HTML&CSS and JavaScript
+
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author

@@ -1,35 +1,27 @@
-const form = document.querySelector("#form");
+// regex Email
+// /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+const form = document.querySelector("form");
 const email = document.querySelector(".email");
-const btnSubmit = document.querySelector(".btn-submit");
+const errorMessage = document.querySelector(".notification");
+const errorIcon = document.querySelector(".icon");
+const regexEmail =
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
 form.addEventListener("submit", (e) => {
+  // prevent form from submitting
   e.preventDefault();
-
-  validateEmail();
-});
-
-// function validateInput() {
-//   // get the valus from the input
-//   // trim() to remove the extra space
-//   const emailValue = email.value.trim();
-
-//   if (emailValue === "") {
-//     //show error
-//     // remove hidden class
-//     setErrorFor(email, "Email cannot be blank");
-//   } else {
-//     // keep hidden class
-//     setSuccessFor(email);
-//   }
-// }
-
-function validateEmail(email) {
-  const emailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-  if (email.value.match(emailFormat)) {
-    email.classList.add("success");
+  if (email.value == "") {
+    errorMessage.innerText = "Email cannot be blank";
+    form.classList.add("error");
+    form.classList.remove("success");
+  } else if (!email.value.match(regexEmail)) {
+    // if regexEmail is not matched user's enter value
+    errorMessage.innerText = "Please enter a valid email";
+    form.classList.add("error");
+    form.classList.remove("success");
   } else {
-    document.querySelector(".notification").classList.remove(hidden);
-    document.querySelector("icon").classList.remove(hidden);
+    form.classList.add("success");
+    form.classList.remove("error");
   }
-}
+});

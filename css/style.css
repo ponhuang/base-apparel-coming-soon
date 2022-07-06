@@ -16,6 +16,7 @@ body {
   font-weight: 400;
   display: flex;
   flex-direction: column;
+  max-height: 100vh;
   background: url("../images/bg-pattern-desktop.svg") no-repeat;
   background-size: cover; }
 
@@ -24,15 +25,12 @@ body {
   display: inline-block;
   border: none;
   background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-  padding: 1.2rem 3.5rem;
+  padding: 1.5rem 3.5rem;
   border-radius: 100px;
   box-shadow: 0 8px 15px #f8bfbf;
   cursor: pointer; }
   .btn:hover, .btn:active {
     background-image: linear-gradient(135deg, #ffebeb, #ffb8b8); }
-
-.hidden {
-  visibility: hidden; }
 
 /*---------- HERO INFO ----------*/
 .hero {
@@ -66,68 +64,59 @@ body {
     background-image: url("../images/hero-desktop.jpg");
     background-size: contain;
     background-repeat: no-repeat; }
+  .hero .logo {
+    width: 16rem;
+    grid-column: 1 / 2;
+    align-items: center;
+    padding: 4rem 8rem; }
 
-.logo {
-  width: 16rem;
-  grid-column: 1 / 2;
-  align-items: center;
-  padding: 4rem 8rem; }
-
-/*---------- EMAIL ----------*/
-.email {
-  position: relative;
-  width: 80%;
-  display: inline-block; }
-  .email input {
-    display: block;
-    font-family: inherit;
+/*---------- FORM ----------*/
+#form {
+  width: 100%; }
+  #form .email__container {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    width: 100%;
+    position: relative; }
+  #form .email {
+    display: inline-block;
+    height: 100%;
+    width: Min(100%, 50rem);
     color: inherit;
-    padding: 1.2rem 2rem;
-    width: 90%;
+    font-family: inherit;
     border-radius: 100px;
-    border: 1px solid #b7aeae; }
-    .email input::-ms-input-placeholder {
-      color: #b7aeae;
-      font-weight: 300; }
-    .email input::-webkit-input-placeholder {
-      font-weight: 300;
-      color: #b7aeae; }
-    .email input:focus {
-      outline: 0; }
-  .email.success input {
-    border-color: #4c745c; }
-  .email.error input {
-    border: 2px solid #f96262; }
-
-form {
-  position: relative; }
-
-.btn-submit {
-  position: absolute;
-  top: 6%;
-  right: 15%;
-  transform: translate(-6%, -15%); }
-  .btn-submit > img {
-    width: 9px; }
-
-.icon {
-  width: 2rem;
-  position: absolute;
-  top: 23%;
-  right: 20%;
-  transform: translate(-23%, -25%); }
-
-.notification {
-  color: #ee8c8c;
-  font-size: 1.3rem;
-  margin-left: 2rem;
-  margin-top: 1rem; }
+    border: 1px solid #b7aeae;
+    padding-left: 2rem; }
+  #form .btn {
+    margin-left: -6rem; }
+  #form .error-icon {
+    width: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -70%);
+    display: none; }
+  #form .notification {
+    color: #ee8c8c;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    display: none; }
+  #form.error .error-icon {
+    display: block; }
+  #form.error .notification {
+    display: block; }
+  #form.error input {
+    border: 1.5px solid #f96262; }
+  #form.success input {
+    border: 1.5px solid #a0c5af; }
 
 /*---------- FOOTER ----------*/
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 10rem;
   color: #b7aeae; }
   .attribution a {
     color: #ce9797; }
@@ -138,7 +127,7 @@ form {
     font-size: 56.25%; }
   body {
     background-image: none;
-    background-color: #ffebeb; }
+    background-color: #faf2f2; }
   .logo {
     grid-column: 1 / -1;
     grid-row: 1 / 2;

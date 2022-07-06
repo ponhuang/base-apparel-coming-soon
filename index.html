@@ -9,7 +9,6 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      ｀
       href="./images/favicon-32x32.png"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,7 +20,7 @@
     <title>Base Apparel coming soon page</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body onload="document.email.emailAddress.focus()">
+  <body>
     <header class="hero">
       <img src="images/logo.svg" alt="Base Apparel's logo" class="logo" />
       <div class="hero__info">
@@ -32,21 +31,24 @@
           launch deals.
         </p>
         <form id="form" action="#">
-          <div class="email success">
-            <input id="emailAddress" type="email" placeholder="Email Address" />
+          <div class="email__container">
+            <input
+              id="email"
+              type="email"
+              placeholder="Email Address"
+              class="email"
+            />
+            <button class="btn btn-submit" type="submit">
+              <img src="images/icon-arrow.svg" alt="Arrow Icon" />
+            </button>
+
             <img
               src="images/icon-error.svg"
               alt="error icon"
-              class="icon hidden"
+              class="error-icon"
             />
-            <div class="notification hidden">
-              <p>Please provide a valid email</p>
-            </div>
           </div>
-
-          <button class="btn btn-submit" type="submit">
-            <img src="images/icon-arrow.svg" alt="Arrow Icon" />
-          </button>
+          <p class="notification">Please provide a valid Email</p>
         </form>
       </div>
 

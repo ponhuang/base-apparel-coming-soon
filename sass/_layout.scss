@@ -41,88 +41,83 @@
     background-size: contain;
     background-repeat: no-repeat;
   }
+
+  .logo {
+    width: 16rem;
+    grid-column: 1 / 2;
+    align-items: center;
+    padding: 4rem 8rem;
+  }
 }
 
-.logo {
-  width: 16rem;
-  grid-column: 1 / 2;
-  align-items: center;
-  padding: 4rem 8rem;
-}
+/*---------- FORM ----------*/
+#form {
+  width: 100%;
 
-/*---------- EMAIL ----------*/
-.email {
-  position: relative;
-  width: 80%;
-  display: inline-block;
+  .email__container {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    width: 100%;
+    position: relative;
+  }
 
-  input {
-    display: block;
-    font-family: inherit;
+  .email {
+    display: inline-block;
+    height: 100%;
+    width: Min(100%, 50rem);
     color: inherit;
-    padding: 1.2rem 2rem;
-    width: 90%;
+    font-family: inherit;
     border-radius: 100px;
     border: 1px solid $color-primary-grahish-2;
+    padding-left: 2rem;
+  }
 
-    &::-ms-input-placeholder {
-      color: $color-primary-grahish-2;
-      font-weight: $fw-light;
-    }
-    &::-webkit-input-placeholder {
-      font-weight: $fw-light;
-      color: $color-primary-grahish-2;
+  .btn {
+    margin-left: -6rem;
+  }
+
+  .error-icon {
+    width: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -70%);
+    display: none;
+  }
+
+  .notification {
+    color: $color-linear-red;
+    font-size: 1.3rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+    display: none;
+  }
+
+  &.error {
+    .error-icon {
+      display: block;
     }
 
-    &:focus {
-      outline: 0;
+    .notification {
+      display: block;
+    }
+
+    input {
+      border: 1.5px solid $color-primary;
     }
   }
 
   &.success input {
-    border-color: rgb(76, 116, 92);
+    border: 1.5px solid rgb(160, 197, 175);
   }
-
-  &.error input {
-    border: 2px solid $color-primary;
-  }
-}
-
-form {
-  position: relative;
-}
-
-.btn-submit {
-  position: absolute;
-  top: 6%;
-  right: 15%;
-  transform: translate(-6%, -15%);
-
-  & > img {
-    width: 9px;
-  }
-}
-
-.icon {
-  width: 2rem;
-  position: absolute;
-  top: 23%;
-  right: 20%;
-  transform: translate(-23%, -25%);
-}
-
-.notification {
-  color: $color-linear-red;
-  font-size: 1.3rem;
-  margin-left: 2rem;
-  margin-top: 1rem;
 }
 
 /*---------- FOOTER ----------*/
 .attribution {
   font-size: 11px;
   text-align: center;
-  margin-top: 5rem;
+  margin-top: 10rem;
   color: $color-primary-grahish-2;
 
   a {
