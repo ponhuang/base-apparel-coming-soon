@@ -18,10 +18,10 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: 100vh;
+  min-height: 100vh;
 
-  background: url("../images/bg-pattern-desktop.svg") no-repeat;
-  background-size: cover;
+  // background: url("../images/bg-pattern-desktop.svg") no-repeat;
+  // background-size: cover;
 }
 
 /*---------- HELPER CLASS ----------*/

@@ -5,8 +5,7 @@ const form = document.querySelector("form");
 const email = document.querySelector(".email");
 const errorMessage = document.querySelector(".notification");
 const errorIcon = document.querySelector(".icon");
-const regexEmail =
-  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 form.addEventListener("submit", (e) => {
   // prevent form from submitting

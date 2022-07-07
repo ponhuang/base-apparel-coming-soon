@@ -16,8 +16,6 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
-
 ## Overview
 
 ### The challenge
@@ -32,15 +30,16 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+Desktop
+![](screenshot/desktop.png)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+Mobile
+![](screenshot/mobile.png)
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+Email Validation
+![](screenshot/valid-email.png)
+![](screenshot/error.png)
+![](screenshot/error-2.png)
 
 ### Links
 
@@ -91,19 +90,43 @@ form.addEventListener("submit", (e) => {
 });
 ```
 
+Regular Expression
+
+```js
+const regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+```
+
+<!--
+^ this symbol represents beginning of input
+
+\w this means any upperCase character, lowerCase
+character, number or underscore
+
+- means: one or more characters
+  ([\.-]?\w) means, a dot '.' or hyphen '- '. ('?' means: but there must be a character after it)
+
+* means: zero or more combinations of ([\.-]?\w)
+
+@\w+ means: @ and one or more characters after it
+
+(\.\w{2,3})+$ this means at the end, there must be a dot, then, 2-3 characters like .com, .eg, uk or .net
+
+$ this represents end of the input
+ -->
+
 ### Continued development
 
 ### Useful resources
 
 - [Email Validation](https://www.youtube.com/watch?v=ouCTndDS4zk) This YouTube video help me to know how to make email validation with HTML&CSS and JavaScript
 
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
 ## Author
 
 Pon Huang
 
-[Intagram](https://www.instagram.com/ponhuang/)
+[Intagram](https://www.instagram.com/une.tw)
 [Art Blog](https://une722.wordpress.com)
 
 ## Acknowledgments
+
+Thanks [Ahmed](https://www.frontendmentor.io/profile/Ahmed96Mah) for helping the design issues and also provide explanation of Email Validation.
