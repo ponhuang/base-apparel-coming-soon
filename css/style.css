@@ -90,9 +90,9 @@ body {
   #form .email__container {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 5rem;
-    width: 100%;
-    position: relative; }
+    width: 100%; }
   #form .email {
     display: inline-block;
     height: 100%;
@@ -101,16 +101,15 @@ body {
     font-family: inherit;
     border-radius: 100px;
     border: 1px solid #b7aeae;
-    padding-left: 2rem; }
+    padding-left: 2rem;
+    background-color: transparent; }
   #form .btn {
     margin-left: -6rem; }
   #form .error-icon {
     width: 2rem;
-    position: absolute;
-    top: 50%;
-    left: 65%;
-    transform: translate(-50%, -65%);
-    display: none; }
+    display: none;
+    margin-left: -11rem;
+    margin-right: 7rem; }
   #form .notification {
     color: #ee8c8c;
     font-size: 1.3rem;
@@ -171,7 +170,5 @@ body {
         text-align: center; }
       .hero__info #form {
         width: 85%; }
-        .hero__info #form .error-icon {
-          left: 57%; }
   .attribution {
     margin-top: 2rem; } }

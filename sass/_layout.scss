@@ -77,9 +77,10 @@
   .email__container {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 5rem;
     width: 100%;
-    position: relative;
+    // position: relative;
   }
 
   .email {
@@ -91,6 +92,7 @@
     border-radius: 100px;
     border: 1px solid $color-primary-grahish-2;
     padding-left: 2rem;
+    background-color: transparent;
   }
 
   .btn {
@@ -99,11 +101,13 @@
 
   .error-icon {
     width: 2rem;
-    position: absolute;
-    top: 50%;
-    left: 65%;
-    transform: translate(-50%, -65%);
+    // position: absolute;
+    // top: 50%;
+    // left: 65%;
+    // transform: translate(-50%, -65%);
     display: none;
+    margin-left: -11rem;
+    margin-right: 7rem;
   }
 
   .notification {
