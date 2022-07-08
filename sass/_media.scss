@@ -8,6 +8,7 @@
   body {
     background-image: none;
     background-color: #faf2f2;
+    //Auto is similar to 'fit-content' value, which makes the element's width or height fit the actual content inside it (with no extra space).
     min-height: auto;
   }
 
@@ -52,6 +53,10 @@
 
       #form {
         width: 85%;
+
+        .error-icon {
+          left: 57%;
+        }
       }
     }
   }

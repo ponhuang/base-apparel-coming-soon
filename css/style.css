@@ -47,7 +47,7 @@ body {
     min-height: 100vh;
     background: url("../images/bg-pattern-desktop.svg") no-repeat, linear-gradient(135deg, white, #fff5f5);
     background-size: cover;
-    width: 45%;
+    width: 42.5%;
     padding-left: 5.5%;
     padding-right: 7%; }
   .hero__info {
@@ -71,7 +71,7 @@ body {
     font-size: 1.4rem;
     margin-bottom: 3rem; }
   .hero__img {
-    width: 42.5%;
+    width: 45%;
     min-height: 100vh;
     background-image: url("../images/hero-desktop.jpg");
     background-size: cover;
@@ -108,8 +108,8 @@ body {
     width: 2rem;
     position: absolute;
     top: 50%;
-    left: 70%;
-    transform: translate(-50%, -70%);
+    left: 65%;
+    transform: translate(-50%, -65%);
     display: none; }
   #form .notification {
     color: #ee8c8c;
@@ -171,5 +171,7 @@ body {
         text-align: center; }
       .hero__info #form {
         width: 85%; }
+        .hero__info #form .error-icon {
+          left: 57%; }
   .attribution {
     margin-top: 2rem; } }
